@@ -6,7 +6,8 @@ Exporting expire date and some more date from certificate.
 
 ## Configure
 
-Сертификаты будут по умолчанию экспортироваться из хранилища `Cert:\CurrentUser\My\` если хотите изменить стандартное место, то поменяйте значение в **12 строчке** в файле `Cert.ps1`
+Certificates will be exported by default from the store `Cert:\CurrentUser\My\`. If you want to change the default location, modify the value on **line 12** in the file `Cert.ps1`.
+
 
 ## Installing
 
@@ -56,4 +57,6 @@ cert_not_after{cn="YourCertCN",instance="YourHostname",pubkey="YourPubkeyHexForm
 * Open 8000 (default) port in windows firewall (add inbound rule for TCP 8000)
 * You can change default values in `CertExporterService.py` (default *port*, default *updatetime* metrics)
 * Add new target in your prometheus
-* Add new (dashboard)[https://grafana.com/grafana/dashboards/22294]
+* Add new [dashboard][def]
+
+[def]: https://grafana.com/grafana/dashboards/22294
